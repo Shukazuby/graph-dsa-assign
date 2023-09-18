@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        height: 100vh;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+</style>
+<body>
+
+    <div class="item">
+        <h1>Graph DSA Assignment</h1>
+       <p>check console</p> 
+
+    </div>
+    
+</body>
+<script>
+
+class Alphabet{
+    constructor(){
+        this.numberOfNodes = 0;
+        this.adjacentList = {
+        };
+
+    }
+    newNode(node){
+        this.adjacentList[node]= []
+        this.numberOfNodes++;
+    };
+
+    connectEdge(node1, node2){
+        this.adjacentList[node1].push(node2)
+        this.adjacentList[node2].push(node1)
+    }
+} 
+     const myAlphabets = new Alphabet();
+     myAlphabets.newNode('A')
+     myAlphabets.newNode('B')
+     myAlphabets.newNode('C')
+     myAlphabets.newNode('D')
+     myAlphabets.newNode('E')
+     myAlphabets.newNode('F')
+     myAlphabets.newNode('G')
+     myAlphabets.connectEdge('A', 'E')
+     myAlphabets.connectEdge('A', 'B')
+     myAlphabets.connectEdge('E', 'B')
+     myAlphabets.connectEdge('E', 'D')
+     myAlphabets.connectEdge('D', 'B')
+     myAlphabets.connectEdge('A', 'C')
+     myAlphabets.connectEdge('C', 'F')
+     myAlphabets.connectEdge('C', 'G')
+
+     console.log(myAlphabets)
+    </script>
+</html>
